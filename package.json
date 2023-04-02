@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "xxxx",
   "scripts": {
-    "start": "node build/init.js",
+    "start": "nodemon --exec babel-node src/init.js",
     "build": "npm run build:server && npm run build:assets",
     "build:server": "babel src -d build",
     "build:assets": "webpack --mode=production",

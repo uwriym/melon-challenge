@@ -1,8 +1,8 @@
 import express from "express";
-import { home } from "../controllers/songController";
+import { getHome, postHome } from "../controllers/homeController";
 
 const rootRouter = express.Router();
 
-rootRouter.get("/", home);
+rootRouter.route("/").get(getHome).post(postHome);
 
 export default rootRouter;

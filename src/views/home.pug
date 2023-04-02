@@ -1,4 +1,18 @@
 extends base
 
 block content
-    div
+    
+    form(method="POST", align="center")
+        input(placeholder="Search Music", name="keyword", type="text", required)
+        input(type="submit", value="Search")
+
+
+    div(align="center")
+
+        iframe(id="ytplayer" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/M7lc1UVf-VE"
+frameborder="0" allowfullscreen)
+
+    if searchKeyword 
+        h1 search keyword: #{searchKeyword}
+
+    
